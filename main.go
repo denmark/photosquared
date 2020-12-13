@@ -24,6 +24,9 @@ func main() {
 	borderPadding := 300                        // 300 pixels
 	borderColor := color.RGBA{255, 255, 255, 0} // White
 
+	if len(os.Args) < 2 {
+		log.Fatal("Usage: photosquared <image>\n")
+	}
 	inputImageFullPath := os.Args[1]
 	fmt.Printf("inputImage: [%s]\n", inputImageFullPath)
 

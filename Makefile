@@ -1,5 +1,8 @@
+all:	mac-app
 
-all:	squareme
+mac-app:	build
+	mkdir -p PhotoSquared.app/Contents/MacOS
+	cp $(GOPATH)/bin/photosquared PhotoSquared.app/Contents/MacOS
 
-squareme:
-	go build -o bin/squareme main.go
+build:	
+	go build -o $(GOPATH)/bin/photosquared main.go
