@@ -1,1 +1,3 @@
-# photosquared
+# squareme
+Process
+FIXME:  

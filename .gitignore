@@ -13,3 +13,12 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Ignore my test images
+*.gif
+*.jpg
+*.jpeg
+*.png
+
+# Ignore bin/
+bin/
