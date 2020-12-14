@@ -28,7 +28,7 @@ func main() {
 		log.Fatal("Usage: photosquared <image>\n")
 	}
 	inputImageFullPath := os.Args[1]
-	fmt.Printf("inputImage: [%s]\n", inputImageFullPath)
+	fmt.Printf("Reading from: [%s]\n", inputImageFullPath)
 
 	inputImageFile, err := os.Open(inputImageFullPath)
 	if err != nil {
@@ -46,7 +46,13 @@ func main() {
 
 	outputWidthHeight := int(math.Max(float64(inputWidth), float64(inputHeight))) + (2 * borderPadding)
 
-	fmt.Printf("Width: %d; Height: %d; outputWidthHeight: %d\n", inputWidth, inputHeight, outputWidthHeight)
+	fmt.Printf(
+		"Input Dimensions: %dx%d; Output Dimensions: %dx%d\n",
+		inputWidth,
+		inputHeight,
+		outputWidthHeight,
+		outputWidthHeight,
+	)
 
 	// Compute the upper left,right coordinates to place the input Image
 	//   within the output Image
@@ -68,7 +74,7 @@ func main() {
 	inputImageFileDir, inputImageFilename := filepath.Split(inputImageFullPath)
 	inputImageFileExt := filepath.Ext(inputImageFilename)
 	outputImageFilename := fmt.Sprintf(
-		"%s%s-square%s",
+		"%s%s-squared%s",
 		inputImageFileDir,
 		strings.TrimSuffix(inputImageFilename, inputImageFileExt),
 		inputImageFileExt,
