@@ -4,16 +4,16 @@
 
 Small command line utility to generate a square image with a border out of a source image of arbitrary aspect ratio suitable for posting to Instagram.
 
-As an amateur photographer I do all my raw processing in [https://www.captureone.com/en](Capture One) and want to keep the aspect ratio that makes the most sense for the composition. Unfortunately, Instagram works exclusively with square images. Before I wrote PhotoSquared, I'd have to take the processed image, copy it, make a new all white square image that was 300 pixels wider than the widest side of the source image and insert my processed image. So much work!
+As an amateur photographer I do all my raw processing in [Capture One](https://www.captureone.com/en) and want to keep the aspect ratio that makes the most sense for the composition. Unfortunately, Instagram works exclusively with square images. Before I wrote PhotoSquared, I'd have to take the processed image, copy it, make a new all white square image that was 300 pixels wider than the widest side of the source image and insert my processed image. So much work!
 
-Enter PhotoSquared. I built PhotoSquared in an afternoon and there are probably a ton of features I could add to it. For now, it only has the single feature I needed. PhotoSquared is written in [https://golang.org/](Go) so you can build it on any machine that supports Go. Now I just process my images as I normally do and before transferring them to my phone I just run them through PhotoSquared and I'm done.
+Enter PhotoSquared. I built PhotoSquared in an afternoon and there are probably a ton of features I could add to it. For now, it only has the single feature I needed. PhotoSquared is written in [Go](https://golang.org/) so you can build it on any machine that supports Go. Now I just process my images as I normally do and before transferring them to my phone I just run them through PhotoSquared and I'm done.
 
 ## Downloading
 
 All of these instructions assume you are using a Mac because it's what I have. If someone finds this useful and has a Windows machines feel free to contribute some instructions.
 
-* Download [https://golang.org/dl/](Go) from [https://golang.org/dl/](https://golang.org/dl/)
-* Follow the [https://golang.org/doc/install](installation instructions) for your machine. They may be found here [https://golang.org/doc/install](https://golang.org/doc/install)
+* Download [Go](https://golang.org/dl/) from [https://golang.org/dl/](https://golang.org/dl/)
+* Follow the [installation instructions](https://golang.org/doc/install) for your machine. They may be found here [https://golang.org/doc/install](https://golang.org/doc/install)
 * Get a copy of the PhotoSquared source code here [https://github.com/denmark/photosquared](https://github.com/denmark/photosquared) and put it in your $GOPATH/src/ directory
 * If you have `make` installed then simply go to $GOPATH/src/photosquared/ and type `make`
 * If you do not have `make` you can compile PhotoSquared using the following command: `go build -o ${GOPATH}/bin/photosquared main.go`
