@@ -21,7 +21,7 @@ import (
 )
 
 func main() {
-	borderPadding := 300                        // 300 pixels
+	borderPadding := 100                        // 100 pixels
 	borderColor := color.RGBA{255, 255, 255, 0} // White
 
 	if len(os.Args) < 2 {
