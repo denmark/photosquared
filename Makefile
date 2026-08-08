@@ -1,4 +1,7 @@
 all:	build
 
-build:	
-	go build -o $(GOPATH)/bin/photosquared main.go
+build:
+	go build -o bin/photosquared main.go
+
+install:
+	go install .
